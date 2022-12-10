@@ -1,8 +1,254 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Raleway&display=swap');
 
 body{
-    margin: 0 0;
-    padding: 0 0;
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 50px;
     font-family: 'Fira Sans', sans-serif;
     font-family: 'Raleway', sans-serif;
 }
+h1{
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+}
+h2{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+}
+h3{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+}
+a{
+    color: #000000;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.hidden{
+    display: none;
+}
+
+
+/* // DEBUT DE HEADER // */
+header{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* DEBUT DE NAV */
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav img{
+    width: 61px;
+    height: 19px;
+}
+header nav .links_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav a{
+    height: 120px;
+    padding: 0 20px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    border-top: 2px solid transparent;
+}
+nav a:hover{
+    color: #0065FC;
+    border-top: 2px solid #0065FC;
+}
+/* FIN DE NAV */
+
+header .welcome_text{
+    margin-bottom: 20px;
+}
+
+/* DEBUT DE SEARCH_MENU */
+header .search_menu{
+    height: 50px;
+    width: 400px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #F2F2F2;
+    overflow: hidden;
+}
+header .search_menu form{
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
+header .search_menu .location_icon{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .search_menu i{
+    font-size: 18px;
+}
+header .search_menu input{
+    height: 44px;
+    flex-grow: 1;
+    border: none;
+    color: #000000;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+}
+header .search_menu input::placeholder{
+    color: #000000;
+    padding-left: 20px;
+}
+header .search_menu input:focus{
+    outline: none;
+}
+header .search_menu_text{
+    width: 30%;
+    color: #ffffff;
+    background-color: #0065FC;
+    text-align: center;
+}
+/* FIN DE SEACH_MENU */
+
+/* DEBUT DE SEARCH_FILTERS */
+header .search_filters{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+header .search_filters button{
+    height: 50px;
+    padding: 10px 20px;
+    background-color: #ffffff;;
+    border: 1px solid #D9D9D9;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+header .search_filters button:hover{
+    background-color: #DEEBFF;
+}
+header .search_filters i{
+    font-size: 22px;
+    color: #0065FC;
+}
+/* FIN DE SEARCH_FILTERs */
+
+/* DEBUT DE HEADER INFO */
+header .header_info{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+header .header_info div{
+    height: 25px;
+    width: 25px;
+    border: 1px solid #D9D9D9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    color: #0065FC;
+}
+/* FIN DE HEADER INFO */
+
+/* // FIN DE HEADER // */
+
+
+/* // DEBUT DE MAIN // */
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main article{
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    padding: 10px 40px;
+    box-sizing: border-box;
+}
+.main_selection{
+    width: 880px;
+}
+.main_best{
+    width: 420px;
+}
+
+.cards_wrapper{
+    display: grid;
+    gap: 30px;
+}
+.main_selection .cards_wrapper{
+    grid-template-columns: repeat(3, 250px);
+    grid-auto-rows: 200px;
+    
+}
+.main_best .cards_wrapper{
+    grid-template-columns: 340px;
+    grid-auto-rows: 140px;
+}
+
+.card{
+    padding: 5px 5px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    display: flex;
+}
+.vertical{
+    flex-direction: column;
+}
+.card .img_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.vertical .img_wrapper{
+    height: 125px;
+    border-radius: 20px 20px 0 0;
+}
+.horizontal .img_wrapper{
+    width: 140px;
+    border-radius: 20px 0 0 20px;
+}
+.text_wrapper{
+    display: grid;
+    grid-template-rows: repeat(3, 33%);
+}
+.card img{
+    height: 100%;
+    width: 100%;
+}
+.vertical .text_wrapper{
+    height: 40%;
+}
+.text_wrapper > *{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+.horizontal p{
+    margin-top: -10px;
+}
+
+
