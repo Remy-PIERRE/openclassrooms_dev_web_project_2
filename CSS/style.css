@@ -4,6 +4,7 @@
     --main-blue: #0065FC;
     --main-blue-light: #DEEBFF;
     --main-grey: #D9D9D9;
+    --main-grey-light: #F2F2F2;
 }
 *{
     margin: 0;
@@ -15,7 +16,7 @@
 body{
     max-width: 1400px;
     margin: 0 50px;
-    background-color: #FFFAFA;
+    background-color: #FFFFFF;
 }
 
 .hidden{
@@ -39,7 +40,12 @@ h3{
 ul{
     list-style: none;
 }
-
+a{
+    color: #000000;
+}
+a:visited{
+    color: #000000;
+}
 
 /* DEBUT DE HEADER */
 header{
@@ -186,7 +192,7 @@ main{
 .radius_grey{
     margin-bottom: 40px;
     padding: 40px;
-    background-color: #f2f2f2;
+    background-color: var(--main-grey-light);
     border-radius: 20px;
     box-sizing: border-box;
 }
@@ -198,9 +204,7 @@ main{
     background-color: #ffffff;
     border-radius: 20px;
     color: #000000;
-}
-.card:visited{
-    color: #000000;
+    box-shadow: 0 5px 0 var(--main-grey-light);
 }
 .card_img_wrapper{
     background-size: cover;
@@ -250,21 +254,21 @@ main{
 }
 /* FIN DE HEBERGEMENT */
 
-/* DEBUT DE ACTIVITES */
-#activites{
+/* DEBUT DE POPULAIRES */
+#populaires{
     width: 420px;
 }
-#activites_title{
+#populaires_title{
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-#activites_title i{
+#populaires_title i{
     color: var(--main-blue);
     font-size: 15px;
 }
-#activites_cards_wrapper{
+#populaires_cards_wrapper{
     display: grid;
     grid-template-columns: 100%;
     grid-auto-rows: 150px;
@@ -285,9 +289,51 @@ main{
 .horizontal_card > *:not(.card_img_wrapper){
     padding-left: 15px;
 }
-/* FIN DE ACTIVITES */
+/* FIN DE POPULAIRES */
 
+/* DEBUT DE ACTIVITE */
+#activites{
+    margin-bottom: 40px;
+}
+#activites h1{
+    margin-bottom: 20px;
+}
+#activites_cards_wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 22%);
+    grid-auto-rows: 440px;
+    gap: 30px 4%;
+}
+.simple_card{
+    display: flex;
+    flex-direction: column;
+}
+.simple_card .card_img_wrapper{
+    height: 90%;
+    border-radius: 20px 20px 0 0;
+}
+.simple_card h2{
+    padding-left: 20px;
+    flex-grow: 1;
+}
+/* FIN DE ACTIVITE */
 
+/* DEBUT DE FOOTER */
+footer{
+    padding: 45px 70px;
+    display: flex;
+    background-color: var(--main-grey-light);
+}
+footer > *{
+    flex-grow: 1;
+}
+footer h2{
+    margin-bottom: 20px;
+}
+footer ul{
+    line-height: 2em;
+}
+/* FIN DE FOOTER */
 
 
 
