@@ -1,11 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Raleway&display=swap');
 
-body{
-    max-width: 1400px;
-    margin: auto;
-    padding: 0 50px;
+:root{
+    --main-blue: #0065FC;
+    --main-blue-light: #DEEBFF;
+    --main-grey: #D9D9D9;
+}
+*{
+    margin: 0;
+    padding: 0;
     font-family: 'Fira Sans', sans-serif;
     font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+}
+body{
+    max-width: 1400px;
+    margin: 0 50px;
+    background-color: #FFFAFA;
+}
+
+.hidden{
+    display: none;
 }
 h1{
     font-weight: 700;
@@ -19,236 +33,262 @@ h2{
 }
 h3{
     font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-}
-p{
-    font-weight: 400;
     font-size: 14px;
     line-height: 16px;
 }
-a{
-    color: #000000;
-    text-decoration: none;
-    transition: all 0.5s;
-}
-.hidden{
-    display: none;
+ul{
+    list-style: none;
 }
 
 
-/* // DEBUT DE HEADER // */
+/* DEBUT DE HEADER */
 header{
-    width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 /* DEBUT DE NAV */
-header nav{
+nav{
+    height: 120px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-header nav img{
+#booki_logo img{
     width: 61px;
     height: 19px;
 }
-header nav .links_wrapper{
+#links_wrapper{
+    height: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
-nav a{
-    height: 120px;
-    padding: 0 20px;
-    margin-left: 20px;
+#links_wrapper a{
+    height: 100%;
+    padding: 0 25px;
     display: flex;
     align-items: center;
+    color: #000000;
     border-top: 2px solid transparent;
 }
-nav a:hover{
-    color: #0065FC;
-    border-top: 2px solid #0065FC;
+#links_wrapper a:hover{
+    color: var(--main-blue);
+    border-top: 2px solid var(--main-blue);
 }
 /* FIN DE NAV */
 
-header .welcome_text{
+#welcome_title{
     margin-bottom: 20px;
+}
+#welcome_title h1{
+    margin-bottom: 5px;
 }
 
 /* DEBUT DE SEARCH_MENU */
-header .search_menu{
+#search_menu{
     height: 50px;
-    width: 400px;
-    margin-bottom: 20px;
-    border-radius: 20px;
-    display: flex;
+    margin-bottom: 30px;
+    display: inline-flex;
     align-items: center;
-    background-color: #F2F2F2;
+    border-radius: 20px;
     overflow: hidden;
 }
-header .search_menu form{
-    width: 70%;
+#search_menu form{
+    height: 100%;
+    width: 300px;
+    background-color: var(--main-grey);
     display: flex;
     align-items: center;
 }
-header .search_menu .location_icon{
+#search_menu form div{
     height: 50px;
     width: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-header .search_menu i{
     font-size: 18px;
 }
-header .search_menu input{
-    height: 44px;
+#search_input{
+    height: 95%;
+    padding-left: 10px;
     flex-grow: 1;
-    border: none;
-    color: #000000;
     font-weight: 700;
-    font-size: 18px;
-    line-height: 21px;
-}
-header .search_menu input::placeholder{
-    color: #000000;
-    padding-left: 20px;
-}
-header .search_menu input:focus{
+    font-size: 17px;
+    line-height: 20px;
+    border: none;
     outline: none;
 }
-header .search_menu_text{
-    width: 30%;
+#search_input::placeholder{
+    color: #000000;
+}
+#search_menu button{
+    height: 100%;
+    padding: 0 15px;
+    border: none;
+    background-color: var(--main-blue);
     color: #ffffff;
-    background-color: #0065FC;
-    text-align: center;
 }
-/* FIN DE SEACH_MENU */
+/* FIN DE SERACH_MENU */
 
-/* DEBUT DE SEARCH_FILTERS */
-header .search_filters{
-    margin-bottom: 20px;
+/* DEBUT DE FILTERS */
+#filters{
+    margin-bottom: 30px;
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 50px;
 }
-header .search_filters button{
-    height: 50px;
-    padding: 10px 20px;
-    background-color: #ffffff;;
-    border: 1px solid #D9D9D9;
+#filters ul{
+    display: flex;
+    gap: 50px;
+}
+.filter_btn{
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #ffffff;
+    border: 2px solid var(--main-grey);
     border-radius: 25px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
 }
-header .search_filters button:hover{
-    background-color: #DEEBFF;
+.filter_btn:hover{
+    background-color: var(--main-blue-light);
 }
-header .search_filters i{
-    font-size: 22px;
-    color: #0065FC;
+#filters i{
+    color: var(--main-blue);
+    font-size: 16px;
 }
-/* FIN DE SEARCH_FILTERs */
+/* FIN DE FILTERS */
 
-/* DEBUT DE HEADER INFO */
-header .header_info{
+#informations{
     display: flex;
     align-items: center;
     gap: 10px;
 }
-header .header_info div{
+#informations div{
     height: 25px;
     width: 25px;
-    border: 1px solid #D9D9D9;
-    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--main-blue);
+    border: 1px solid var(--main-grey);
+    border-radius: 50%;
     font-size: 10px;
-    color: #0065FC;
 }
-/* FIN DE HEADER INFO */
 
-/* // FIN DE HEADER // */
+/* FIN DE HEADER */
 
-
-/* // DEBUT DE MAIN // */
+/* DEBUT MAIN */
 main{
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
-
-main article{
-    background-color: #F2F2F2;
+.radius_grey{
+    margin-bottom: 40px;
+    padding: 40px;
+    background-color: #f2f2f2;
     border-radius: 20px;
-    padding: 10px 40px;
     box-sizing: border-box;
 }
-.main_selection{
-    width: 880px;
-}
-.main_best{
-    width: 420px;
-}
-
-.cards_wrapper{
-    display: grid;
-    gap: 30px;
-}
-.main_selection .cards_wrapper{
-    grid-template-columns: repeat(3, 250px);
-    grid-auto-rows: 200px;
-    
-}
-.main_best .cards_wrapper{
-    grid-template-columns: 340px;
-    grid-auto-rows: 140px;
-}
-
 .card{
-    padding: 5px 5px;
-    background-color: #ffffff;
-    border-radius: 20px;
-    display: flex;
-}
-.vertical{
-    flex-direction: column;
-}
-.card .img_wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-.vertical .img_wrapper{
-    height: 125px;
-    border-radius: 20px 20px 0 0;
-}
-.horizontal .img_wrapper{
-    width: 140px;
-    border-radius: 20px 0 0 20px;
-}
-.text_wrapper{
-    display: grid;
-    grid-template-rows: repeat(3, 33%);
-}
-.card img{
     height: 100%;
     width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: 20px;
+    color: #000000;
 }
-.vertical .text_wrapper{
-    height: 40%;
+.card:visited{
+    color: #000000;
 }
-.text_wrapper > *{
+.card_img_wrapper{
+    background-size: cover;
+    overflow: hidden;
+}
+.card img{
+    min-height: 100%;
+    max-height: 120%;
+    min-width: 100%;
+    max-width: 120%;
+    object-fit:cover;
+}
+.card > *:not(.card_img_wrapper){
     display: flex;
     align-items: center;
+}
+
+/* DEBUT DE HEBERGEMENTS */
+#hebergements{
+    width: 880px;
+}
+#hebergements h1{
+    margin-bottom: 20px;
+}
+#hebergements_cards_wrapper{
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-auto-rows: 200px;
+    gap: 30px 5%;
+}
+.vertical_card{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 61% repeat(3, 13%);
+}
+.vertical_card .card_img_wrapper{
+    border-radius: 20px 20px 0 0;
+}
+.vertical_card > *:not(.card_img_wrapper){
     padding-left: 10px;
 }
-.horizontal p{
-    margin-top: -10px;
+#afficher_plus_btn{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
+/* FIN DE HEBERGEMENT */
+
+/* DEBUT DE ACTIVITES */
+#activites{
+    width: 420px;
+}
+#activites_title{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#activites_title i{
+    color: var(--main-blue);
+    font-size: 15px;
+}
+#activites_cards_wrapper{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: 150px;
+    gap: 30px;
+}
+.horizontal_card{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: repeat(4, 25%);
+}
+.horizontal_card .card_img_wrapper{
+    grid-area: 1 / 1 / 5 / 2;
+    border-radius: 20px 0 0 20px;
+}
+.horizontal_card .card_stars_wrapper{
+    grid-area: 4 / 2 / 5 / 3;
+}
+.horizontal_card > *:not(.card_img_wrapper){
+    padding-left: 15px;
+}
+/* FIN DE ACTIVITES */
+
+
+
+
 
 

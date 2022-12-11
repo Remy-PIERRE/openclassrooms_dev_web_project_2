@@ -9,56 +9,67 @@
     <title>Booki</title>
 </head>
 <body>
-    
+
     <header>
         <nav>
-            <img src="images/Images Booki/logo/Booki@3x.png" alt="Logo de Booki">
-            <div class="links_wrapper">
-                <a href="#">Hébergements</a>
-                <a href="#">Activités</a>
+            <div id="booki_logo">
+                <img src="images/Images Booki/logo/Booki.png" alt="Logo de Booki">
+            </div>
+            <div id="links_wrapper">
+                <a href="#hebergements">Hébergements</a>
+                <a href="#activites">Activités</a>
             </div>
         </nav>
 
-        <section class="welcome_text">
+        <section id="welcome_title">
             <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
             <h3>En plein centre-ville ou en pleine nature</h3>
         </section>
 
-        <section class="search_menu">
-            <form action="GET">
-                <div class="location_icon">
+        <section id="search_menu">
+            <form action="" method="get">
+                <div>
                     <i class="fa-sharp fa-solid fa-location-dot"></i>
                 </div>
-                
-                <input type="text" name="search_query" id="search_query" placeholder="Marseille, France">
+                <input type="text" name="search_input" id="search_input" placeholder="Marseille, France">
             </form>
-            <div class="search_menu_text">
+            <button>
                 <h2>Rechercher</h2>
                 <i class="fa-solid fa-magnifying-glass hidden"></i>
-            </div>
+            </button>
         </section>
 
-        <section class="search_filters">
+        <section id="filters">
             <h2>Filtres</h2>
-            <button>
-                <i class="fa-solid fa-money-bill-wave"></i>
-                <h2>Economique</h2>
-            </button>
-            <button>
-                <i class="fa-solid fa-person"></i>
-                <h2>Familial</h2>
-            </button>
-            <button>
-                <i class="fa-solid fa-heart"></i>
-                <h2>Romantique</h2>
-            </button>
-            <button>
-                <i class="fa-solid fa-dog"></i>
-                <h2>Animaux autorisés</h2>
-            </button>
+            <ul>
+                <li>
+                    <button class="filter_btn">
+                        <i class="fa-solid fa-money-bill-wave"></i>
+                        <h2>Economique</h2>
+                    </button>
+                </li>
+                <li>
+                    <button class="filter_btn">
+                        <i class="fa-solid fa-person"></i>
+                        <h2>Familial</h2>
+                    </button>
+                </li>
+                <li>
+                    <button class="filter_btn">
+                        <i class="fa-solid fa-heart"></i>
+                        <h2>Romantique</h2>
+                    </button>
+                </li>
+                <li>
+                    <button class="filter_btn">
+                        <i class="fa-solid fa-dog"></i>
+                        <h2>Animaux autorisés</h2>
+                    </button>
+                </li>
+            </ul>
         </section>
 
-        <section class="header_info">
+        <section id="informations">
             <div>
                 <i class="fa-solid fa-info"></i>
             </div>
@@ -67,164 +78,145 @@
     </header>
 
     <main>
-        <article class="main_selection">
+        <article class="radius_grey" id="hebergements">
             <h1>Hébergements à Marseille</h1>
-
-            <section class="cards_wrapper">
-                <div class="card vertical">
-                    <div class="img_wrapper">
-                        <img src="images/Images Booki/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="">
+           
+            <section id="hebergements_cards_wrapper">
+                <a href="#" class="card vertical_card">
+                    <div class="card_img_wrapper">
+                        <img src="images/Images Booki/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Auberge La Canebière">
                     </div>
-                    <div class="text_wrapper">
-                        <h3>Text descriptif</h3>
-                        <p>A partir de X&euro;</p>
-                        <div class="stars_wrapper">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
+                    <h2>Auberge La Canebière</h2>
+                    <p>Nuit à partir de 25€</p>
+                    <div class="card_stars_wrapper">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </div>
-                </div>
-                <div class="card vertical">
-                    <div class="img_wrapper">
-                        <img src="images/Images Booki/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="">
+                </a>
+                <a href="#" class="card vertical_card">
+                    <div class="card_img_wrapper">
+                        <img src="images/Images Booki/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Hôtel du port">
                     </div>
-                    <div class="text_wrapper">
-                        <h3>Text descriptif</h3>
-                        <p>A partir de X&euro;</p>
-                        <div class="stars_wrapper">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
+                    <h2>Hôtel du port</h2>
+                    <p>Nuit à partir de 52€</p>
+                    <div class="card_stars_wrapper">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </div>
-                </div>
-                <div class="card vertical">
-                    <div class="img_wrapper">
-                        <img src="images/Images Booki/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="">
+                </a>
+                <a href="#" class="card vertical_card">
+                    <div class="card_img_wrapper">
+                        <img src="images/Images Booki/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Hôtel Les mouettes">
                     </div>
-                    <div class="text_wrapper">
-                        <h3>Text descriptif</h3>
-                        <p>A partir de X&euro;</p>
-                        <div class="stars_wrapper">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
+                    <h2>Hôtel Les mouettes</h2>
+                    <p>Nuit à partir de 76€</p>
+                    <div class="card_stars_wrapper">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </div>
-                </div>
-                <div class="card vertical">
-                    <div class="img_wrapper">
-                        <img src="images/Images Booki/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="">
+                </a>
+                <a href="#" class="card vertical_card">
+                    <div class="card_img_wrapper">
+                        <img src="images/Images Booki/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Hôtel de la mer">
                     </div>
-                    <div class="text_wrapper">
-                        <h3>Text descriptif</h3>
-                        <p>A partir de X&euro;</p>
-                        <div class="stars_wrapper">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
+                    <h2>Hôtel de la mer</h2>
+                    <p>Nuit à partir de 46€</p>
+                    <div class="card_stars_wrapper">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </div>
-                </div>
-                <div class="card vertical">
-                    <div class="img_wrapper">
-                        <img src="images/Images Booki/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="">
+                </a>
+                <a href="#" class="card vertical_card">
+                    <div class="card_img_wrapper">
+                        <img src="images/Images Booki/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Auberge Le Panier">
                     </div>
-                    <div class="text_wrapper">
-                        <h3>Text descriptif</h3>
-                        <p>A partir de X&euro;</p>
-                        <div class="stars_wrapper">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
+                    <h2>Auberge Le Panier</h2>
+                    <p>Nuit à partir de 23€</p>
+                    <div class="card_stars_wrapper">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </div>
-                </div>
-                <div class="card vertical">
-                    <div class="img_wrapper">
-                        <img src="images/Images Booki/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="">
+                </a>
+                <a href="#" class="card vertical_card">
+                    <div class="card_img_wrapper">
+                        <img src="images/Images Booki/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Hôtel Chez Amina">
                     </div>
-                    <div class="text_wrapper">
-                        <h3>Text descriptif</h3>
-                        <p>A partir de X&euro;</p>
-                        <div class="stars_wrapper">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
+                    <h2>Hôtel Chez Amina</h2>
+                    <p>Nuit à partir de 96€</p>
+                    <div class="card_stars_wrapper">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </div>
-                </div>
+                </a>
             </section>
 
-            <button>
+            <button id="afficher_plus_btn">
                 <h2>Afficher plus</h2>
             </button>
         </article>
 
-        <article class="main_best">
-            <h1>Les plus populaires</h1>
-
-            <section class="cards_wrapper">
-                <div class="card horizontal">
-                    <div class="img_wrapper">
-                        <img src="images/Images Booki/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="">
+        <article class="radius_grey" id="activites">
+            <div id="activites_title">
+                <h1>Les plus populaires</h1>
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+            
+            <section id="activites_cards_wrapper">
+                <a href="#" class="card horizontal_card">
+                    <div class="card_img_wrapper">
+                        <img src="images/Images Booki/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Hôtel Le soleil du matin">
                     </div>
-                    <div class="text_wrapper">
-                        <h3>Text descriptif</h3>
-                        <p>A partir de X&euro;</p>
-                        <div class="stars_wrapper">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
+                    <h2>Hôtel Le soleil du matin</h2>
+                    <p>Nuit à partir de 128€</p>
+                    <div class="card_stars_wrapper">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </div>
-                </div>
-                <div class="card horizontal">
-                    <div class="img_wrapper">
-                        <img src="images/Images Booki/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="">
+                </a>
+                <a href="#" class="card horizontal_card">
+                    <div class="card_img_wrapper">
+                        <img src="images/Images Booki/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Chambres d’hôtes Au cœur de l’eau">
                     </div>
-                    <div class="text_wrapper">
-                        <h3>Text descriptif</h3>
-                        <p>A partir de X&euro;</p>
-                        <div class="stars_wrapper">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
+                    <h2>Chambres d’hôtes Au cœur de l’eau</h2>
+                    <p>Nuit à partir de 71€</p>
+                    <div class="card_stars_wrapper">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </div>
-                </div>
-                <div class="card horizontal">
-                    <div class="img_wrapper">
-                        <img src="images/Images Booki/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="">
+                </a>
+                <a href="#" class="card horizontal_card">
+                    <div class="card_img_wrapper">
+                        <img src="images/Images Booki/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Hôtel Bleu et Blanc">
                     </div>
-                    <div class="text_wrapper">
-                        <h3>Text descriptif</h3>
-                        <p>A partir de X&euro;</p>
-                        <div class="stars_wrapper">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
+                    <h2>Hôtel Bleu et Blanc</h2>
+                    <p>Nuit à partir de 68€</p>
+                    <div class="card_stars_wrapper">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </div>
-                </div>
+                </a>
             </section>
         </article>
     </main>
-
-
-
-
-
+    
 </body>
 </html>
 
@@ -232,7 +224,7 @@
 <!-- icon bank -->
 
 <!-- <i class="fa-solid fa-dog"></i>
-    <i class="fa-solid fa-heart"></i>
+<i class="fa-solid fa-heart"></i>
 <i class="fa-solid fa-info"></i>
 <i class="fa-solid fa-star"></i>
 <i class="fa-solid fa-person"></i>
